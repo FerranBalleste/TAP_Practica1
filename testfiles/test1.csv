@@ -1,0 +1,13 @@
+Column1 Int,Column2 Double," ""Column3 String"""," ""Column4 Int"""," ""Column5 String"""
+1,5.5," ""A""",1,AAAaaaa
+2,-9.5,"""B""",2,Aa 
+9,9.6666,"""Z""",3,AAAAaaa
+10,1.89,"""R""",4,Zabana
+-5,5.9,"""p""",5,Zzza
+100,9.631,"""e""",6,Baltimore
+999,9.777,"""a""",7,Aqueduct
+99999,999.6,"""b""",8,A aaaa
+-80,100.5,"""AA""",9,B bbbb
+20,901.8,"""A1""",10,"""Bon dia"""
+5,10.9,"""1""",11,Banana
+6,521984.5,"""H""",12,"""mmmmm"""

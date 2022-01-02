@@ -1,0 +1,5 @@
+Column1	Column2	Column3	Column4
+1	A	"Monday"	16.5
+5	Z	Tuesday	88.9
+4	E	"Saturday"	76.1
+-5	"5"	"Tomorrow Land"	9999.3
