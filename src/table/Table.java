@@ -1,6 +1,7 @@
 package table;
 
 import java.util.*;
+import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -67,6 +68,19 @@ public class Table {
 	public List<Row> getRowList(){
 		return rowList;
 	}
+
+	/**
+	 * Gets certain column as a list of objects
+	 * @param label column name
+	 * @return selected list of TableElements
+	 */
+	public List<TableElement> getColumnAsList(String label){
+		int index = columnIndex(label);
+		if(index == -1) return null;
+		List<TableElement> column = new ArrayList<>();
+		rowList.forEach(row -> column.add(row.getElement(index)));
+		return column;
+	}
 	
 	/**
 	 * Returns the value of a single item by row and columName
@@ -97,7 +111,7 @@ public class Table {
 	}
 	
 	/**
-	 * Number of columns (number oflabels)
+	 * Number of columns (number of labels)
 	 * @return number of columns
 	 */
 	public int columns() {
@@ -154,6 +168,17 @@ public class Table {
 		RowPredicate pred = new RowPredicate(p, col);
 		List<Row> rowList2 = rowList.stream().filter(pred).collect(Collectors.toList());
 		return new Table(labels, rowList2);
+	}
+
+	/**
+	 * Perform reduce operation on a column
+	 * @param label Column Name
+	 * @param func TableElement function
+	 * @return Result of reduce operation
+	 */
+	public TableElement mapReduce(String label, BinaryOperator<TableElement> func){
+		List<TableElement> list = getColumnAsList(label);
+		return list.stream().reduce(list.get(0).getZero(), func);
 	}
 	
 	@Override
