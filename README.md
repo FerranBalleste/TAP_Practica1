@@ -22,6 +22,10 @@ directories and leaves, files. Nodes and leaves also act as DataFrames. DataFram
 at any level of the composite </p>
 <p>Certain functions might not work if the different labels aren't the same.</p>
 
+## MapReduce
+<p>We have added a mapreduce function on the composite that works on single columns with the same name.</p>
+<p>As a function it takes a TableElement BinaryOperator, there are several inside TableElement interface (add, min, max)</p>
+
 ## Visitor
 <p>A visitor pattern has been added to the previous composite structure. The visitor must allow to run new operations on 
 all DataFrames in the composite (recursively through the directories).</p>
