@@ -1,4 +1,5 @@
 # TAP_Practica1
+<p>https://github.com/FerranBalleste/TAP_Practica1</p>
 06/01/2022
 Ferran Balleste Solsona: ferran.balleste@estudiants.urv.cat
 
@@ -29,5 +30,10 @@ at any level of the composite </p>
 ## Visitor
 <p>A visitor pattern has been added to the previous composite structure. The visitor must allow to run new operations on 
 all DataFrames in the composite (recursively through the directories).</p>
-<p>Maximum, minimum, average and sum visitors have been implemented: (https://github.com/FerranBalleste/TAP_Practica1/tree/master/src/dataframe/visitors)
+<p>Maximum, minimum, average and sum visitors have been implemented: (https://github.com/FerranBalleste/TAP_Practica1/tree/master/src/dataframe/visitors)</p>
+  
+## Dynamic Proxy and observer
+<p>A dynamic proxy pattern has been used to create an Interceptor of the Dataframe</p>
+<p>Using an observer pattern we implemented a LogObserver that logs all operations executed in a proxy, and a QueryObserver that only logs operations that satisfy a filter.</p>
+<p>(https://github.com/FerranBalleste/TAP_Practica1/tree/master/src/dataframe/observer)</p>
 
